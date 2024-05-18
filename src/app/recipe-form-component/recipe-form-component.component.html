@@ -1,0 +1,13 @@
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+  <label for="nombre">nombre: </label>
+  <input id="nombre" type="text" formControlName="nombre">
+  <label for="ingredientes">ingredientes: </label>
+  <input id="ingredientes" type="text" formControlName="ingredientes">
+  <label for="instrucciones">instrucciones: </label>
+  <input id="instrucciones" type="text" formControlName="instrucciones">
+  <label for="tiempoCoccion">tiempo de coccion: </label>
+  <input id="tiempoCoccion" type="text" formControlName="tiempoCoccion">
+  <label for="tiempoPrep">tiempo de preparación: </label>
+  <input id="tiempoPrep" type="text" formControlName="tiempoPrep">
+  <button type="submit" [disabled]="!recipeForm.valid">Submit</button>
+</form>
